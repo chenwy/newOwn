@@ -1,0 +1,64 @@
+/*============================================
+Basic Style
+==============================================*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 21px; //设置行间距离
+    margin-bottom: 100px; //设置body预留空白
+}
+/*============================================
+Header Style
+==============================================*/
+.navigation {
+    background-color: rgba(#101636, 0.2);
+}
+
+.navbar-default {
+    margin: 0;
+    border-radius: 0;
+}
+
+.navbar-default li a {
+    border-top: 1px solid #1ea78d;
+}
+
+.navbar-nav li a.current,
+.navbar-nav li a:focus,
+.navbar-nav li a:hover {
+    background-color: #1ea78d;
+    border-top: 1px solid #32B0EE;
+    color: #fff;
+}
+/*============================================
+Content Style
+==============================================*/
+/*============================================
+Footer Style
+==============================================*/
+footer {
+    position: absolute;
+    bottom: 0; //定位后，设置元素下方为0,可使footer固定在下方
+    background-color: #1ea78d;
+    border-top: 5px solid #062033;
+    color: #fff;
+    height: 100px;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #062033;
+}
+
+.copyright {
+  padding-top: 50px;
+}
