@@ -1,0 +1,84 @@
+<div class="col-md-10 col-md-offset-1">
+  <h2><%= @job.title %></h2>
+  <br/>
+  <div>
+    <ul class="clearfix">
+      <div class="list-group fl50">
+        <li>
+          <span>职位月薪：</span>
+          <strong><%= @job.wage_lower_bound %>-<%= @job.wage_upper_bound %>元/月</strong>
+        </li>
+        <li>
+          <span>发布日期：</span>
+          <strong><%= render_date_format(@job.created_at) %></strong>
+        </li>
+        <li>
+          <span>工作经验：</span>
+          <strong>不限</strong>
+        </li>
+        <li>
+          <span>招聘人数：</span>
+          <strong><%= @job.require_num %>人</strong>
+        </li>
+      </div>
+
+      <div class="list-group fl50">
+        <li>
+          <span>工作地点：</span>
+          <strong><%= @job.workplace %></strong>
+        </li>
+        <li>
+          <span>工作性质：</span>
+          <strong>全职</strong>
+        </li>
+        <li>
+          <span>最低学历：</span>
+          <strong>本科</strong>
+        </li>
+        <li>
+          <span>职位类别：</span>
+          <strong><%= @job.duty %></strong>
+        </li>
+      </div>
+    </ul>
+    <div class="clearfix">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a href="#jobDetail" data-toggle="tab">职位描述</a>
+        </li>
+        <li>
+          <a href="#comInfo" data-toggle="tab">公司介绍</a>
+        </li>
+      </ul>
+
+      <!-- <p class="collect fr">
+        <a href="javascript:void(0)" class="reportBtn" id="reportBtn">
+          <font></font>举报</a>
+        <a href="javascript:void(0)" rel="nofollow" onclick="zlapply.searchjob.saveJobTerminalApply(); dyweTrackEvent('bjobsdetail14gb', 'jobcollection'); return false;">
+          <i></i>收藏</a>
+      </p> -->
+      <div class="tab-content">
+        <div id="jobDetail" class="tab-pane fade in active">
+          <%= simple_format(@job.description) %>
+        </div>
+        <div id="comInfo" class="tab-pane fade">
+
+          <!-- <h5>
+            <a href="#">安信证券股份有限公司深圳宝安海秀路证券营业部</a>
+            <a href="#">该公司其他职位</a>
+          </h5> -->
+          <p></p>
+          <div>&nbsp; &nbsp; &nbsp;安信证券股份有限公司（以下简称“安信证券”）成立于2006年8月18日。目前股东为国家开发投资公司、中国证券投资者保护基金有限责任公司、深圳市远致投资有限公司等14家，注册资本319,999万元。<br>
+            安信证券总部设于深圳，下辖5家分公司，在25个省级行政区设有154家证券营业部，并全资拥有安信期货、安信国际、安信乾宏，控股安信基金等子公司，构建起综合金融理财服务平台。<br>
+            安信证券可为广大投资者提供证券代理买卖、证券承销与保荐、证券资产管理、证券投资咨询、融资融券、基金代销、金融产品代销、股指期货中间介绍以及与证券交易、证券投资活动有关的财务顾问等服务。&nbsp;更多详情，请浏览我司网站http://www.essence.com.cn&nbsp;</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br/>
+  <div >
+    <%= button_to(t("sendRecord"), '#', class:"btn-submit" )%>
+  </div>
+</div>

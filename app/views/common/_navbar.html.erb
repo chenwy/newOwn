@@ -17,6 +17,9 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarMenu">
             <li>
+              <%= link_to(t("companyJobsList"), company_jobs_path) %>
+            </li>
+            <li>
               <%= link_to(t("userManage"), edit_user_registration_path(current_user)) %>
             </li>
             <li role="separator" class="divider"></li>

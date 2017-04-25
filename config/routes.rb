@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
 
+  resources :jobs
+
+  namespace :company do
+    resources :jobs do
+      member do
+        post :publish
+        post :hide
+      end
+    end
+  end
+
   devise_for :users
   root 'welcome#index'
 

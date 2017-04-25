@@ -1,0 +1,52 @@
+<%= simple_form_for [:company, @job] do |f| %>
+<div class="form-group">
+  <div class="input-group">
+    <span class="input-group-addon"><%= t("title") %></span>
+    <%= f.input :title, label: false, input_html: {class: "form-control"} %>
+  </div>
+
+  <div class="input-group">
+    <span class="input-group-addon"><%= t("wageLowerBound") %></span>
+    <%= f.input :wage_lower_bound, label: false, input_html: {class: "form-control"} %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%= t("wageUpperBound") %></span>
+    <%= f.input :wage_upper_bound, label: false, input_html: {class: "form-control"} %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%= t("contactEmail") %></span>
+    <%= f.input :contact_email, label: false, input_html: {class: "form-control"} %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%= t("workplace") %></span>
+    <%= f.input :workplace, label: false, input_html: {class: "form-control"} %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%= t("requireNum") %></span>
+    <%= f.input :require_num, label: false, input_html: {class: "form-control"} %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%=  t("duty") %></span>
+    <%= f.input :duty, label: false, input_html: {class: "form-control"} %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%= t("phone") %></span>
+    <%= f.input :phone, label: false, input_html: {class: "form-control"} %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%= t("jobClass") %></span>
+    <%= f.input :job_class, label: false, input_html: {class: "form-control"} %>
+  </div>
+  <div class="input-group">
+    <%= f.input :is_hidden, label: t("isHidden") %>
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><%= t("description") %></span>
+    <%= f.input :description, label: false, input_html: {class: "form-control"} %>
+  </div>
+  <br/>
+  <div class="text-center">
+    <%= f.submit t("submit"), class: "btn btn-submit", data: {disable_with: t("submiting")} %>
+  </div>
+</div>
+<% end %>

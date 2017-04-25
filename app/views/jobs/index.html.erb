@@ -1,0 +1,23 @@
+<div class="col-md-12 paddingSpace">
+  <div class="pull-right">
+    <%= link_to(t("createJob"), new_company_job_path, class: "btn btn-md btn-primary" ) %>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= t("title") %></th>
+        <th><%= t("description") %></th>
+        <th><%= t("createdAt") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @jobs.each do |job| %>
+      <tr>
+        <td><%= link_to(job.title, job_path(job)) %></td>
+        <td><%= job.description %></td>
+        <td><%= job.created_at %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

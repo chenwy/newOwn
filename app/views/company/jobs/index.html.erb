@@ -1,0 +1,49 @@
+<div class="col-md-12 paddingSpace">
+  <div class="pull-right">
+    <%= link_to(t("createJob"), new_company_job_path, class: "btn btn-md btn-primary" ) %>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= t("title") %></th>
+        <th><%= t("duty") %></th>
+        <th>薪资</th>
+        <th><%= t("publishAt") %></th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @jobs.each do |job| %>
+      <tr>
+        <td><%= link_to(job.title, company_job_path(job)) %></td>
+        <td><%= job.duty %></td>
+        <td><%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %> k </td>
+        <td>
+          <% if job.is_hidden %>
+            &nbsp;
+          <% else %>
+            <%= render_date_format(job.publish_at) %>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to edit_company_job_path(job), class: "btn btn-xs btn-primary" do %>
+          <i class="fa fa-pencil"></i><% end %>
+          <% if job.is_hidden %>
+          <%= link_to publish_company_job_path(job), method: :post, class: "btn btn-xs btn-primary" do %>
+          <i class="fa fa-eye"></i><% end %>
+          <% else %>
+          <%= link_to hide_company_job_path(job), method: :post, class: "btn btn-xs btn-primary" do %>
+          <i class="fa fa-eye-slash"></i><% end %>
+          <% end %>
+          <%= link_to company_job_path(job), method: :delete, class: "btn btn-xs btn-primary", data: {confirm: t("deleteConfirm")} do %>
+          <i class="fa fa-trash-o"></i><% end %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="text-center">
+    <%= will_paginate @jobs %>
+  </div>
+
+</div>

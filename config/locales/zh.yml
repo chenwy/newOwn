@@ -44,3 +44,28 @@ en:
   forgetPass: "忘记密码?"
   toSignUp: "还没有帐号，请先注册"
   toSignIn: "已有账号，请登录"
+
+  #jobs
+  title: "标题"
+  description: "描述"
+  wageLowerBound: "薪资下限"
+  wageUpperBound: "薪资上限"
+  duty: "职责"
+  phone: "移动电话"
+  contactEmail: "联系邮箱"
+  company: "公司"
+  requireNum: "招聘人数"
+  jobClass: "职位分类"
+  workplace: "工作地点"
+  isHidden: "是否隐藏"
+  publishAt: "发布时间"
+
+  createJob: "发起招聘"
+  editJob: "编辑招聘信息"
+  deleteConfirm: "你确定删除该条信息?"
+
+
+  sendRecord: "立即申请"
+
+  #sidebar
+  companyJobsList: "招聘列表"
