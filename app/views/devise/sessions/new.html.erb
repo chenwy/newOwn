@@ -4,7 +4,7 @@
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <%= f.error_notification %>
       <h1><%= t("userSignIn") %></h1>
-      <%= f.input :email, placeholder: t("username"), label: false, required: false %>
+      <%= f.input :login, placeholder: t("login"), label: false, required: false %>
       <%= f.input :password, placeholder: t("password"), label: false, required: false %>
       <%= f.input :remember_me, label: t("rememberMe"), as: :boolean if devise_mapping.rememberable? %>
       <div>
