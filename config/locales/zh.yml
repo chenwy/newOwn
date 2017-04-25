@@ -22,10 +22,25 @@
 en:
   #navbar
   home: "主页"
-  signIn: "登陆"
+  signIn: "登录"
   signUp: "注册"
   userManage: "用户设置"
   signOut: "退出"
 
   #mainPage
   startBtn: "马上应征"
+
+  #loginPanel
+  userSignIn: "用户登录"
+  userSignUp: "帐号注册"
+  submit: "提交"
+  submiting: "正在提及"
+  username: "用户名"
+  email: "邮箱"
+  rememberMe: "记住我"
+  login: "用户名/邮箱"
+  password: "密码"
+  passwordCorfirm: "确认密码"
+  forgetPass: "忘记密码?"
+  toSignUp: "还没有帐号，请先注册"
+  toSignIn: "已有账号，请登录"
