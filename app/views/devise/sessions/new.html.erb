@@ -1,17 +1,19 @@
 <section id="loginPanel">
-  <div id="loginContent">
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
-    <h1><%= t("userSignIn") %></h1>
+  <div class="col-md-12 fadeInUp animated" data-wow-duration="500ms">
+    <div id="loginContent">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+      <h1><%= t("userSignIn") %></h1>
       <%= f.input :email, placeholder: t("username"), label: false, required: false %>
       <%= f.input :password, placeholder: t("password"), label: false, required: false %>
       <%= f.input :remember_me, label: t("rememberMe"), as: :boolean if devise_mapping.rememberable? %>
-    <div>
-      <%= f.button :submit, t("submit"), data: {disable_with: t("submiting")} %>
-      <%= link_to t("forgetPass"), '#' %>
-      <%= link_to t("toSignUp"), new_user_registration_path %>
+      <div>
+        <%= f.button :submit, t("submit"), data: {disable_with: t("submiting")} %>
+        <%= link_to t("forgetPass"), '#' %>
+        <%= link_to t("toSignUp"), new_user_registration_path %>
+      </div>
+      <% end %>
+      <div class="space"></div>
     </div>
-    <% end %>
-    <div class="space"></div>
   </div>
 </section>
