@@ -26,3 +26,6 @@ en:
   signUp: "注册"
   userManage: "用户设置"
   signOut: "退出"
+
+  #mainPage
+  startBtn: "马上应征"

@@ -36,8 +36,55 @@ Header Style
     color: #fff;
 }
 /*============================================
-Content Style
+Slider Style
 ==============================================*/
+.box {
+    background-image: url("header.jpg"); //加载图像
+    background-repeat: no-repeat; //背景图像将仅显示一次
+    background-size: 100% 100%;
+    padding-bottom: 300px;
+    margin-bottom: 50px;
+
+    .box-inner {
+        background-color: rgba(250, 250, 250, 0.7);
+        text-align: center;
+        margin-top: 150px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+//---------Content---------
+.content-section-a {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.lead {
+    font-size: 18px;
+    font-weight: 400;
+}
 /*============================================
 Footer Style
 ==============================================*/
@@ -60,5 +107,5 @@ footer a:hover {
 }
 
 .copyright {
-  padding-top: 50px;
+    padding-top: 50px;
 }
