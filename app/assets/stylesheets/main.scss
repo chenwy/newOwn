@@ -12,25 +12,28 @@ body {
     line-height: 21px; //设置行间距离
     margin-bottom: 100px; //设置body预留空白
 }
+
 /*============================================
 Header Style
 ==============================================*/
-.navigation {
+#navigation {
     background-color: rgba(#101636, 0.2);
 }
 
 .navbar-default {
     margin: 0;
+    border: 0;
     border-radius: 0;
 }
 
-.navbar-default li a {
+.navbar-default .navbar-nav > li > a {
     border-top: 1px solid #1ea78d;
+    color: #fff;
 }
 
-.navbar-nav li a.current,
-.navbar-nav li a:focus,
-.navbar-nav li a:hover {
+.navbar-default .navbar-nav li a.current,
+.navbar-default .navbar-nav li a:focus,
+.navbar-default .navbar-nav li a:hover {
     background-color: #1ea78d;
     border-top: 1px solid #32B0EE;
     color: #fff;
