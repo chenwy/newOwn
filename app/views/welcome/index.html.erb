@@ -3,7 +3,7 @@
     <div class="row box">
       <div class="box-inner col-md-6 col-md-offset-3">
         <h1><%= t("webIntro") %></h1>
-        <%= link_to t('startBtn'), jobs_path, class: 'btn btn-danger' %>
+        <%= link_to(t('startBtn'), jobs_path, class: 'btn btn-danger')  %>
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
   <div class="container">
     <div class="row">
 
-      <div class="text-center mb50 bounceInDown animated">
+      <div class="text-center mb50 bounceInDown">
         <h3><%= t("features") %></h3>
         <div class="devider">
           <i class="fa fa-heart-o fa-lg"></i>
