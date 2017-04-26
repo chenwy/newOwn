@@ -1,0 +1,14 @@
+<div class="col-md-4 col-md-offset-4">
+  <h2 class="text-center"><%= t("sendRecord") %></h2>
+  <hr />
+
+  <%= simple_form_for [@job, @resume] do |f| %>
+    <div class="form-group">
+      <%= f.input :content, label: t("content"), input_html: {class: "form-control"} %>
+      <%= f.input :attachment, label: t("attachment")%>
+    </div>
+    <div class="form-action text-center">
+      <%= f.submit t("submit"), class: "btn btn-primary", data: {disable_with: t("submiting")} %>
+    </div>
+  <% end %>
+</div>

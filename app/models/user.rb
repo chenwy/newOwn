@@ -5,13 +5,18 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
 
-  #验证
+  #校验规则
   validates :username, presence: true, uniqueness: {case_sensitive: false}
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, multiline: true
 
   #虚拟属性，可作为用户名或者邮箱进行验证
   attr_accessor :login
 
+
+  #映射关系
+  has_many :resumes
+
+  #方法
   def self.find_for_authentication(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)

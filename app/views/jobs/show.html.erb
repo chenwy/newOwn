@@ -79,6 +79,6 @@
 
   <br/>
   <div >
-    <%= button_to(t("sendRecord"), '#', class:"btn-submit" )%>
+    <%= button_to(t("sendRecord"), new_job_resume_path(@job), method: :get, class:"btn-submit" )%>
   </div>
 </div>

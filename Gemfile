@@ -40,6 +40,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'font-awesome-rails'
 gem 'will_paginate'
+gem 'carrierwave'
 
 gem "animate-rails"
 
