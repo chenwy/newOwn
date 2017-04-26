@@ -24,4 +24,14 @@ $(window).scroll(function() {
     } else {
         $("#navigation").css("background-color", "rgba(16, 22, 54, 0.2)");
     }
+
+    if ($(window).scrollTop() > 100) {
+        $("#showPageHeader").css("z-index", "1");
+        // $("#showPageHeaderFix").css("z-index", "2");
+        $("#navigation").css("z-index", "1"); 
+        $("#showPageHeaderFix").show();
+    } else {
+        $("#showPageHeaderFix").hide();
+        $("#showPageHeader").css("z-index", "2");
+    }
 });

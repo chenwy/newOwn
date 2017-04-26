@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+   get "application/back"
 
   resources :jobs do
     resources :resumes
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
         post :publish
         post :hide
       end
+      resources :resumes
     end
   end
 

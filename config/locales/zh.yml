@@ -21,6 +21,7 @@
 
 en:
   #navbar
+  sysName: "快途"
   home: "主页"
   signIn: "登录"
   signUp: "注册"
@@ -28,7 +29,17 @@ en:
   signOut: "退出"
 
   #mainPage
+  webIntro: "快人一步 迈上征途"
   startBtn: "马上应征"
+
+  features: "服务优势"
+  feature-1: "优质职位"
+  feature-1-info: "大量优质的职位等着你来挑战，好的人才绝对能够遇见好的机会"
+  feature-2: "快速反馈"
+  feature-2-info: "一旦简历的状态更新，我们将第一时间通知您，让简历不再鸟无音讯"
+  feature-3: "信用安全"
+  feature-3-info: "企业认证，信用等级防止你求职被骗"
+
 
   #loginPanel
   userSignIn: "用户登录"
@@ -50,7 +61,7 @@ en:
   description: "描述"
   wageLowerBound: "薪资下限"
   wageUpperBound: "薪资上限"
-  duty: "职责"
+  duty: "职位类别"
   phone: "移动电话"
   contactEmail: "联系邮箱"
   company: "公司"
@@ -59,13 +70,21 @@ en:
   workplace: "工作地点"
   isHidden: "是否隐藏"
   publishAt: "发布时间"
+  resumeCount: "简历"
 
   createJob: "发起招聘"
   editJob: "编辑招聘信息"
   deleteConfirm: "你确定删除该条信息?"
 
+  #jobDetail
+  dutyWage: "职位薪资"
 
   sendRecord: "立即申请"
 
   #sidebar
   companyJobsList: "招聘列表"
+
+  #resumes
+  content: "内容"
+  attachment: "附件"
+  resumesList: "简历列表"

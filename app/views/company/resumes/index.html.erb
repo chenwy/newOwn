@@ -1,0 +1,6 @@
+<div class="col-md-12">
+  <h2><%= @job.title %> - <%= t("resumesList") %> </h2>
+  <hr />
+
+  <%= render :partial => 'resumes', :collection => @resumes, :as => :resume %>
+</div>

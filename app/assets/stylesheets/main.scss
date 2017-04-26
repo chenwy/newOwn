@@ -40,6 +40,11 @@ Header Style
     border-radius: 0;
 }
 
+.navbar-default .navbar-header a {
+    color: #fff;
+    font-size: 30px;
+}
+
 .navbar-default .navbar-nav > li > a {
     border-top: 1px solid #1ea78d;
     color: #fff;
@@ -52,56 +57,94 @@ Header Style
     border-top: 1px solid #32B0EE;
     color: #fff;
 }
+
+.avatar img {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    // padding: 0;
+}
+
+.dropdown .dropdown-toggle {
+    padding: 0;
+}
 /*============================================
 Slider Style
 ==============================================*/
 .box {
-    background-image: url("header.jpg"); //加载图像
+    background-image: url("header.jpeg"); //加载图像
     background-repeat: no-repeat; //背景图像将仅显示一次
     background-size: 100% 100%;
     padding-bottom: 300px;
     margin-bottom: 50px;
 
     .box-inner {
-        background-color: rgba(250, 250, 250, 0.7);
         text-align: center;
-        margin-top: 150px;
+        margin-top: 200px;
+        margin-bottom: 80px;
     }
 
     h1 {
-        font-size: 30px;
-    }
-
-    p {
-        font-size: 16px;
+        font-size: 50px;
+        margin-bottom: 20px;
     }
 }
-//---------Content---------
-
-.content-section-a {
-    padding: 50px 0;
-    background-color: #f8f8f8;
+/*============================================
+Features Style
+==============================================*/
+.features {
+    background-color: #f4f7f9;
+    padding: 70px 0;
 }
 
-.content-section-b {
-    padding: 50px 0;
-    border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;
+.service-item {
+    &:hover {
+        position: relative;
+        top: -5px;
+    }
 }
 
-.section-heading-spacer {
+.service-icon {
+    border: 1px solid #0eb493;
+    border-radius: 50%;
+    color: #0eb493;
     float: left;
-    width: 200px;
-    border-top: 3px solid #e7e7e7;
+    padding: 10px 13px;
+    position: relative;
 }
 
-.section-heading {
-    margin-bottom: 30px;
+.service-desc {
+    margin-left: 70px;
+    position: relative;
+    top: 5px;
 }
 
-.lead {
-    font-size: 18px;
-    font-weight: 400;
+.service-desc h3 {
+    color: #062033;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.service-desc p {
+    color: #062033;
+    font-size: 15px;
+}
+
+#facts {
+    background-image: asset_data_url("city.jpg");
+    background-color: rgba(6,32,51,.8);
+    background-attachment: fixed !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+}
+
+.parallax-overlay {
+    background-color: rgba(6,32,51,.8);
+    padding: 70px 0;
 }
 /*============================================
 Footer Style
@@ -145,12 +188,50 @@ Company Jobs Style
     width: 100%; //forces the inputs to take up all of their parent container.
     margin: 2px 0;
 }
+/*============================================
+Show jobs Style
+==============================================*/
+.top-fixed-box {
+    height: 125px;
+    display: table;
+    overflow: hidden;
+    width: auto;
+    margin: 0;
+    z-index: 2;
+    background: url("fixed-bg.png") repeat-x;
+    position: relative;
+}
 
-.fl50 {
+.fixed-inner-box {
+    height: 93px;
+    display: table;
+    width: 1130px;
+    padding: 7px 15px;
+    margin: 0 auto;
+}
+
+.showpage-left {
+    width: 70%;
+    padding: 8px 18px 20px;
+    background-color: #fff;
     float: left;
-    width: 50%;
-    border-top: 3px solid #e7e7e7;
-    padding-top: 10px;
+}
+
+.showpage-right {
+    width: 30%;
+    height: 100%;
+    float: left;
+    border-left: 1px solid #D8E6F8;
+    background-color: #F4FAFF;
+    padding: 5px 18px 20px;
+}
+
+.cateFixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: none;
 }
 /*============================================
 pagination Style

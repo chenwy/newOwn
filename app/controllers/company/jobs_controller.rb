@@ -4,7 +4,7 @@ class Company::JobsController < ApplicationController
   layout "company"
 
   def index
-    @jobs = Job.all.paginate(page: params[:page], per_page: 1)
+    @jobs = Job.all.paginate(page: params[:page], per_page: 10)
   end
 
   def new
@@ -31,7 +31,7 @@ class Company::JobsController < ApplicationController
   def update
     @job = Job.find(params[:id])
     if @job.update(job_params)
-      redirect_to company_jobs_path
+      redirect_to company_job_path(@job)
     else
       render :edit
     end
@@ -47,7 +47,7 @@ class Company::JobsController < ApplicationController
   def publish
     @job = Job.find(params[:id])
     @job.publish!
-    flash[:notice] = "发布招聘信息成功"
+    # flash[:notice] = "发布招聘信息成功"
     redirect_to company_jobs_path
   end
 
@@ -55,7 +55,7 @@ class Company::JobsController < ApplicationController
   def hide
     @job = Job.find(params[:id])
     @job.hide!
-    flash[:notice] = "隐藏招聘信息成功"
+    # flash[:notice] = "隐藏招聘信息成功"
     redirect_to company_jobs_path
   end
 
