@@ -71,6 +71,7 @@ en:
   isHidden: "是否隐藏"
   publishAt: "发布时间"
   resumeCount: "简历"
+  wage: "薪资"
 
   createJob: "发起招聘"
   editJob: "编辑招聘信息"
