@@ -1,0 +1,14 @@
+<%= simple_form_for [:company, @company], url: company_enterprises_path, html: {class: "form-horizontal"}, wrapper: :horizontal_form do |f| %>
+
+<%= f.input :name, label: t("companyName") %>
+<%= f.input :scale, label: t("companyScale") %>
+<%= f.input :address, label: t("companyAddress") %>
+<%= f.input :nature, label: t("companyNature") %>
+<%= f.input :webSite, label: t("companyWebSite") %>
+<%= f.input :industry, label: t("companyIndustry") %>
+<%= f.input :description, label: t("companyDesc"), input_html: {rows: 20} %>
+
+<div class="text-center">
+  <%= f.button :submit,  t("submit"), class: "btn btn-submit", method: :post, data: {disable_with: t("submiting")}%>
+</div>
+<% end %>

@@ -1,0 +1,17 @@
+<div class="col-md-12">
+  <div class="">
+    <%= link_to("add", new_company_enterprise_path) %>
+
+    <%= link_to("edit", edit_company_enterprise_path(@company)) %>
+  </div>
+
+  <div>
+    <p><%= @company.name%></p>
+    <p><%= @company.scale%></p>
+    <p><%= @company.address%></p>
+    <p><%= @company.webSite%></p>
+    <p><%= @company.industry%></p>
+    <p><%= @company.nature%></p>
+    <p><%= simple_format(@company.description)%></p>
+  </div>
+</div>

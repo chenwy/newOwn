@@ -15,6 +15,7 @@ class User < ApplicationRecord
 
   #映射关系
   has_many :resumes
+  has_many :companies
 
   #方法
   def self.find_for_authentication(warden_conditions)

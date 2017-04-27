@@ -89,3 +89,13 @@ en:
   content: "内容"
   attachment: "附件"
   resumesList: "简历列表"
+
+  #company
+  companyInfo: "公司资料"
+  companyName: "公司名称"
+  companyScale: "公司规模"
+  companyAddress: "公司地址"
+  companyNature: "公司性质"
+  companyWebSite: "公司网址"
+  companyIndustry: "公司行业"
+  companyDesc: "公司介绍"

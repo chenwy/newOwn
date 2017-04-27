@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       end
       resources :resumes
     end
+    resources :enterprises
   end
 
   devise_for :users
